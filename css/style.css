@@ -1,8 +1,8 @@
 /* ==========================================================================
-   Blossom Wellness — "Blossom Atelier" design system
-   Visual reference: the Blossom Wellness TIRZZY KPV poster — blush pearl
-   skies, watercolor cherry blossom, champagne-gold botanicals, glossy ruby
-   serif headlines, script accents and pearl-white panels with gold hairlines.
+   Premium Supplements — "Pearl Atelier" design system
+   Blush pearl skies, watercolour cherry blossom, champagne-gold botanicals,
+   glossy ruby serif headlines, script accents and pearl-white panels with
+   gold hairlines — the same pearl-and-gold language as the brand seal.
 
    Palette (brand-locked):
      blush pink   #F7D5D8   pearl pink   #FCE9E8
@@ -333,7 +333,7 @@ strong { color: var(--burgundy); }
 }
 
 /* --------------------------------------------------------------------------
-   4. Navigation
+   4b. Navigation
    -------------------------------------------------------------------------- */
 .nav {
   position: sticky;
@@ -359,6 +359,7 @@ strong { color: var(--burgundy); }
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
+  min-width: 0;
 }
 .brand-logo {
   width: 48px;
@@ -379,7 +380,7 @@ strong { color: var(--burgundy); }
 .brand-text {
   font-family: var(--serif);
   font-weight: 600;
-  font-size: 1.35rem;
+  font-size: clamp(1.08rem, 1.1vw + 0.75rem, 1.32rem);
   line-height: 1;
   color: var(--burgundy);
   display: flex;
@@ -389,8 +390,8 @@ strong { color: var(--burgundy); }
 .brand-text small {
   font-family: var(--sans);
   font-weight: 700;
-  font-size: 0.58rem;
-  letter-spacing: 0.24em;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold-deep);
 }
@@ -795,7 +796,7 @@ strong { color: var(--burgundy); }
 }
 
 /* --------------------------------------------------------------------------
-   8. Floral decoration layers
+   8b. Floral decoration layers
    -------------------------------------------------------------------------- */
 .floral-layer {
   position: absolute;
@@ -1783,6 +1784,25 @@ a.info-card:hover { transform: translateY(-3px); border-color: var(--gold-hair-s
   color: var(--on-dark-muted);
 }
 .copy { font-size: 0.8rem; color: rgba(217, 182, 190, 0.8); margin: 0; }
+.copy a { color: var(--gold-soft); }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.5rem;
+  margin: 0 0 1.4rem;
+  padding: 0;
+  list-style: none;
+}
+.footer-links a {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--on-dark-muted);
+}
+.footer-links a:hover { color: var(--gold-soft); }
 
 /* --------------------------------------------------------------------------
    14. WhatsApp float
@@ -1817,7 +1837,7 @@ a.info-card:hover { transform: translateY(-3px); border-color: var(--gold-hair-s
 }
 
 /* --------------------------------------------------------------------------
-   16. Headline word swap (js/main.js)
+   15. Headline word swap (js/main.js)
    -------------------------------------------------------------------------- */
 .swap-word {
   display: inline-block;
@@ -1827,7 +1847,19 @@ a.info-card:hover { transform: translateY(-3px); border-color: var(--gold-hair-s
 .swap-word.is-in { transform: translateY(0.55em) rotate(2deg); opacity: 0; transition: none; }
 
 /* --------------------------------------------------------------------------
-   16. Motion preferences
+   16. Print — a clean one-page catalogue
+   -------------------------------------------------------------------------- */
+@media print {
+  .nav, .wa-float, .floral-layer, .footer-florals, .hero-bg, .menu-btn,
+  .product-order, .reviews-more-wrap, .contact-form { display: none !important; }
+  body { background: #fff; color: #000; }
+  .hero { padding-top: 1rem; }
+  .product-card, .review-card, .goal-card, .service { box-shadow: none; break-inside: avoid; }
+  a[href^="http"]::after { content: ""; }
+}
+
+/* --------------------------------------------------------------------------
+   17. Motion preferences
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

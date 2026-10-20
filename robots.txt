@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://premiumsupplements.co.ke/sitemap.xml

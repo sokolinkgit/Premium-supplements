@@ -1,2 +1,9 @@
 # Local venv for tools/render_vials.py (see README)
 .venv-img/
+
+# Source art for tools/prepare_images.py (rendered outputs are committed)
+assets/img/_raw/
+assets/img/florals/_raw/
+
+# Local tooling venv (pillow/numpy/fonttools for the renderers)
+.venv-img/
