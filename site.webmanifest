@@ -1,0 +1,15 @@
+{
+  "name": "Premium Supplements",
+  "short_name": "Premium Supplements",
+  "description": "Premium peptides and wellness solutions, in stock and delivered across Kenya.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFF7F0",
+  "theme_color": "#FFF7F0",
+  "lang": "en-KE",
+  "icons": [
+    { "src": "assets/img/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
